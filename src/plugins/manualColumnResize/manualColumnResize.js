@@ -81,18 +81,6 @@ function ManualColumnResize() {
     removeClass(guide, 'active');
   }
 
-  var checkColumnHeader = function(element) {
-    if (element.tagName != 'BODY') {
-      if (element.parentNode.tagName == 'THEAD') {
-        return true;
-      } else {
-        element = element.parentNode;
-        return checkColumnHeader(element);
-      }
-    }
-    return false;
-  };
-
   var getTHFromTargetElement = function(element) {
     if (element.tagName != 'TABLE') {
       if (element.tagName == 'TH') {
@@ -109,6 +97,17 @@ function ManualColumnResize() {
     var pressed;
     var dblclick = 0;
     var autoresizeTimeout = null;
+
+    var checkColumnHeader = function(element) {
+      if (element.tagName != 'BODY') {
+        if (element == instance.rootElement) {
+          return true;
+        } else {
+          return checkColumnHeader(element.parentNode);
+        }
+      }
+      return false;
+    };
 
     eventManager.addEventListener(instance.rootElement, 'mouseover', function(e) {
       if (checkColumnHeader(e.target)) {
