@@ -7,13 +7,13 @@
  * Licensed under the MIT license.
  * http://handsontable.com/
  *
- * Date: Thu Aug 27 2015 11:51:28 GMT+0200 (CEST)
+ * Date: Tue Sep 08 2015 14:21:26 GMT-0400 (EDT)
  */
 /*jslint white: true, browser: true, plusplus: true, indent: 4, maxerr: 50 */
 
 window.Handsontable = {
   version: '0.17.0',
-  buildDate: 'Thu Aug 27 2015 11:51:28 GMT+0200 (CEST)'
+  buildDate: 'Tue Sep 08 2015 14:21:26 GMT-0400 (EDT)'
 };
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Handsontable = f()}})(function(){var define,module,exports;return (function init(modules, cache, entry) {
   (function outer (modules, cache, entry) {
@@ -15218,17 +15218,6 @@ function ManualColumnResize() {
     removeClass(handle, 'active');
     removeClass(guide, 'active');
   }
-  var checkColumnHeader = function(element) {
-    if (element.tagName != 'BODY') {
-      if (element.parentNode.tagName == 'THEAD') {
-        return true;
-      } else {
-        element = element.parentNode;
-        return checkColumnHeader(element);
-      }
-    }
-    return false;
-  };
   var getTHFromTargetElement = function(element) {
     if (element.tagName != 'TABLE') {
       if (element.tagName == 'TH') {
@@ -15244,6 +15233,16 @@ function ManualColumnResize() {
     var pressed;
     var dblclick = 0;
     var autoresizeTimeout = null;
+    var checkColumnHeader = function(element) {
+      if (element.tagName != 'BODY') {
+        if (element == instance.rootElement) {
+          return true;
+        } else {
+          return checkColumnHeader(element.parentNode);
+        }
+      }
+      return false;
+    };
     eventManager.addEventListener(instance.rootElement, 'mouseover', function(e) {
       if (checkColumnHeader(e.target)) {
         var th = getTHFromTargetElement(e.target);
