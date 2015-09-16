@@ -7,13 +7,13 @@
  * Licensed under the MIT license.
  * http://handsontable.com/
  *
- * Date: Thu Sep 10 2015 14:56:37 GMT+0200 (CEST)
+ * Date: Wed Sep 16 2015 09:55:14 GMT-0400 (EDT)
  */
 /*jslint white: true, browser: true, plusplus: true, indent: 4, maxerr: 50 */
 
 window.Handsontable = {
   version: '0.18.0',
-  buildDate: 'Thu Sep 10 2015 14:56:37 GMT+0200 (CEST)'
+  buildDate: 'Wed Sep 16 2015 09:55:14 GMT-0400 (EDT)'
 };
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Handsontable = f()}})(function(){var define,module,exports;return (function init(modules, cache, entry) {
   (function outer (modules, cache, entry) {
@@ -15345,12 +15345,11 @@ var $ManualColumnResize = ManualColumnResize;
     removeClass(this.guide, 'active');
   },
   checkIfColumnHeader: function(element) {
-    if (element.tagName != 'BODY') {
+    if (element != this.hot.rootElement) {
       if (element.parentNode.tagName == 'THEAD') {
         return true;
       } else {
-        element = element.parentNode;
-        return this.checkIfColumnHeader(element);
+        return this.checkIfColumnHeader(element.parentNode);
       }
     }
     return false;
@@ -27665,5 +27664,5 @@ if (typeof exports !== "undefined") {
 })(function() {
   return this || window;
 }());
-},{}]},{},[23,57,58,59,60,82,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,83,84,85,86,99,100,101,89,90,91,92,93,94,30,34,31,32,39,33,35,36,37,38])("zeroclipboard")
+},{}]},{},[23,57,59,58,60,82,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,83,84,85,86,99,100,101,89,90,91,92,93,94,30,34,31,32,39,33,35,36,37,38])("zeroclipboard")
 });
