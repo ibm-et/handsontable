@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  * http://handsontable.com/
  *
- * Date: Wed Sep 16 2015 09:55:14 GMT-0400 (EDT)
+ * Date: Mon Sep 21 2015 20:04:24 GMT-0400 (EDT)
  */
 
 .handsontable {
@@ -577,22 +577,6 @@ Comment For Cell
 .handsontable.listbox tr td.current,
 .handsontable.listbox tr:hover td {
   background: #eee;
-}
-
-.ht_clone_top {
-  z-index: 101;
-}
-
-.ht_clone_left {
-  z-index: 102;
-}
-
-.ht_clone_corner {
-  z-index: 103;
-}
-
-.ht_clone_debug {
-  z-index: 103;
 }
 
 .handsontable td.htSearchResult {
