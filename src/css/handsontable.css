@@ -579,22 +579,6 @@ Comment For Cell
   background: #eee;
 }
 
-.ht_clone_top {
-  z-index: 101;
-}
-
-.ht_clone_left {
-  z-index: 102;
-}
-
-.ht_clone_corner {
-  z-index: 103;
-}
-
-.ht_clone_debug {
-  z-index: 103;
-}
-
 .handsontable td.htSearchResult {
   background: #fcedd9;
   color: #583707;
