@@ -7,13 +7,13 @@
  * Licensed under the MIT license.
  * http://handsontable.com/
  *
- * Date: Mon Sep 21 2015 23:07:54 GMT-0400 (EDT)
+ * Date: Mon Sep 28 2015 18:22:05 GMT-0400 (EDT)
  */
 /*jslint white: true, browser: true, plusplus: true, indent: 4, maxerr: 50 */
 
 window.Handsontable = {
   version: '0.18.0',
-  buildDate: 'Mon Sep 21 2015 23:07:54 GMT-0400 (EDT)'
+  buildDate: 'Mon Sep 28 2015 18:22:05 GMT-0400 (EDT)'
 };
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Handsontable = f()}})(function(){var define,module,exports;return (function init(modules, cache, entry) {
   (function outer (modules, cache, entry) {

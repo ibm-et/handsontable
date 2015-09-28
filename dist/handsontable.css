@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  * http://handsontable.com/
  *
- * Date: Mon Sep 21 2015 23:07:54 GMT-0400 (EDT)
+ * Date: Mon Sep 28 2015 18:22:05 GMT-0400 (EDT)
  */
 
 .handsontable {
@@ -226,7 +226,6 @@
   position: fixed;
   top: 0;
   cursor: col-resize;
-  z-index: 110;
   width: 5px;
   height: 25px;
 }
@@ -235,7 +234,6 @@
   position: fixed;
   left: 0;
   cursor: row-resize;
-  z-index: 110;
   height: 5px;
   width: 50px;
 }
