@@ -226,7 +226,6 @@
   position: fixed;
   top: 0;
   cursor: col-resize;
-  z-index: 110;
   width: 5px;
   height: 25px;
 }
@@ -235,7 +234,6 @@
   position: fixed;
   left: 0;
   cursor: row-resize;
-  z-index: 110;
   height: 5px;
   width: 50px;
 }
