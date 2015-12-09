@@ -3848,7 +3848,7 @@ var domHelpers = ($__helpers_47_dom_47_element__ = require("helpers/dom/element"
 var domEventHelpers = ($__helpers_47_dom_47_event__ = require("helpers/dom/event"), $__helpers_47_dom_47_event__ && $__helpers_47_dom_47_event__.__esModule && $__helpers_47_dom_47_event__ || {default: $__helpers_47_dom_47_event__});
 var HELPERS = [arrayHelpers, browserHelpers, dataHelpers, functionHelpers, mixedHelpers, numberHelpers, objectHelpers, settingHelpers, stringHelpers, unicodeHelpers];
 var DOM = [domHelpers, domEventHelpers];
-Handsontable.buildDate = 'Fri Dec 04 2015 11:56:12 GMT+0100 (CET)';
+Handsontable.buildDate = 'Wed Dec 09 2015 13:53:40 GMT-0500 (EST)';
 Handsontable.packageName = 'handsontable';
 Handsontable.version = '0.20.2';
 var baseVersion = '@@baseVersion';
@@ -15207,12 +15207,11 @@ var $ManualColumnResize = ManualColumnResize;
     removeClass(this.guide, 'active');
   },
   checkIfColumnHeader: function(element) {
-    if (element.tagName != 'BODY') {
+    if (element != this.hot.rootElement) {
       if (element.parentNode.tagName == 'THEAD') {
         return true;
       } else {
-        element = element.parentNode;
-        return this.checkIfColumnHeader(element);
+        return this.checkIfColumnHeader(element.parentNode);
       }
     }
     return false;

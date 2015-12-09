@@ -241,7 +241,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   position: fixed;
   top: 0;
   cursor: col-resize;
-  z-index: 110;
   width: 5px;
   height: 25px;
 }
@@ -250,7 +249,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   position: fixed;
   left: 0;
   cursor: row-resize;
-  z-index: 110;
   height: 5px;
   width: 50px;
 }
@@ -630,23 +628,6 @@ Comment For Cell
 .handsontable.listbox tr td.current,
 .handsontable.listbox tr:hover td {
   background: #eee;
-}
-
-.ht_clone_top {
-  z-index: 101;
-}
-
-.ht_clone_left {
-  z-index: 102;
-}
-
-.ht_clone_top_left_corner,
-.ht_clone_bottom_left_corner {
-  z-index: 103;
-}
-
-.ht_clone_debug {
-  z-index: 103;
 }
 
 .handsontable td.htSearchResult {
